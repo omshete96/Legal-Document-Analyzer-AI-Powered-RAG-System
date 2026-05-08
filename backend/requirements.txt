@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+chromadb
+sentence-transformers
+pypdf
+pdfplumber
+pymupdf
+pytesseract
+pdf2image
+pillow
+python-dotenv
+groq
+numpy
+pydantic
+python-multipart

@@ -1,0 +1,20 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/.env
+backend/chroma_db/
+backend/temp_*
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+node_modules/
+
+# Misc
+.vscode/
+*.log
+.DS_Store
+Thumbs.db

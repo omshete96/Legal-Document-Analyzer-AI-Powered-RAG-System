@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: legal-analysis-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: "apt-get install -y tesseract-ocr poppler-utils && pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false          # you'll enter this manually in the Render dashboard
+      - key: TESSDATA_PREFIX
+        value: /usr/share/tesseract-ocr/5/tessdata
+    disk:
+      name: chroma-storage
+      mountPath: /data
+      sizeGB: 1
